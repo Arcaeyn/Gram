@@ -1,0 +1,50 @@
+name: Gram
+options:
+  bundleIdPrefix: com.marshallz
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  developmentLanguage: en
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+targets:
+  Gram:
+    type: application
+    platform: iOS
+    sources:
+      - path: Gram
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.marshallz.gram
+        PRODUCT_NAME: Gram
+        TARGETED_DEVICE_FAMILY: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        SUPPORTS_MACCATALYST: NO
+        SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD: NO
+    info:
+      path: Gram/Info.plist
+      properties:
+        CFBundleDisplayName: Gram
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSRequiresIPhoneOS: true
+        ITSAppUsesNonExemptEncryption: false
+        NSCameraUsageDescription: Take photos and videos to post or send in messages.
+        NSMicrophoneUsageDescription: Record videos and voice messages.
+        NSPhotoLibraryUsageDescription: Choose photos and videos to post or send in messages.
+        UILaunchScreen: {}
+        UIRequiresFullScreen: true
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UIApplicationShortcutItems:
+          - UIApplicationShortcutItemType: com.marshallz.gram.settings
+            UIApplicationShortcutItemTitle: Settings
+            UIApplicationShortcutItemIconSymbolName: slider.horizontal.3

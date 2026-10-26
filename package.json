@@ -1,0 +1,12 @@
+{
+  "name": "gram-filter-tests",
+  "private": true,
+  "description": "Tests for Gram's injected Instagram filter scripts",
+  "scripts": {
+    "test": "node Tests/rules.test.js && node Tests/filter.dom.test.js && node Tests/filter.dm.test.js && node Tests/filter.prompts.test.js",
+    "bench": "node Tests/filter.bench.js"
+  },
+  "devDependencies": {
+    "jsdom": "24.1.3"
+  }
+}
